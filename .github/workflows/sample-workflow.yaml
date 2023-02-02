@@ -1,0 +1,17 @@
+name: Sample Workflow
+on:
+  push: # enabling push event on master branch to fire the workflow
+    branches:
+      - main
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout out current code using public action
+        uses: actions/checkout@v2
+      - name: get the list of files in our current directory and its subdirectory
+        run: | # this | enables us to multiple commands, good for formatting
+          pwd
+          ls -alR
+      - name: echo command
+        run: echo "Hello world"
