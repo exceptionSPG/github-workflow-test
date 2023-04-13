@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/dipendr4/test.dipendrasecondaryschool.edu.np/
-    - /bin/cp -r . $DEPLOYPATH
+    - /bin/cp ./*.html $DEPLOYPATH
